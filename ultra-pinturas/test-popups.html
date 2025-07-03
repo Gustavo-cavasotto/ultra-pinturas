@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Popups - Ultra Pinturas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hidden { display: none; }
+        
+        /* Test styles matching the main site */
+        #selectedServicesPanel,
+        #serviceToast {
+          transform: translateX(calc(100% + 30px));
+          opacity: 0;
+          pointer-events: none;
+        }
+        
+        #selectedServicesPanel.translate-x-full,
+        #serviceToast.translate-x-full {
+          transform: translateX(calc(100% + 30px)) !important;
+          opacity: 0;
+          pointer-events: none;
+        }
+        
+        #selectedServicesPanel.translate-x-0 {
+          transform: translateX(0) !important;
+          opacity: 1 !important;
+          pointer-events: auto !important;
+        }
+        
+        #serviceToast.translate-x-0 {
+          transform: translateX(0) !important;
+          opacity: 1 !important;
+          pointer-events: auto !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Teste de Popups - Ultra Pinturas</h1>
+        
+        <div class="grid gap-4 mb-8">
+            <button id="showPanel" class="bg-blue-500 text-white px-4 py-2 rounded">
+                Mostrar Painel de Serviços
+            </button>
+            <button id="hidePanel" class="bg-red-500 text-white px-4 py-2 rounded">
+                Esconder Painel de Serviços
+            </button>
+            <button id="showToast" class="bg-green-500 text-white px-4 py-2 rounded">
+                Mostrar Toast
+            </button>
+            <button id="hideToast" class="bg-orange-500 text-white px-4 py-2 rounded">
+                Esconder Toast
+            </button>
+            <button id="checkStatus" class="bg-purple-500 text-white px-4 py-2 rounded">
+                Verificar Status
+            </button>
+        </div>
+        
+        <div id="status" class="p-4 bg-blue-100 rounded mb-4">
+            Clique nos botões para testar...
+        </div>
+        
+        <div id="details" class="p-4 bg-gray-200 rounded text-sm">
+            <h3 class="font-bold">Informações:</h3>
+            <ul class="mt-2 space-y-1">
+                <li>• Os popups devem estar completamente invisíveis quando escondidos</li>
+                <li>• Não deve aparecer nenhuma parte deles no canto da tela</li>
+                <li>• Quando visíveis, devem aparecer com margem correta</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Service Selection Toast (copy from main site) -->
+    <div id="serviceToast" class="fixed top-20 right-0 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-40">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle mr-2"></i>
+            <span>Serviço adicionado à solicitação!</span>
+        </div>
+    </div>
+
+    <!-- Selected Services Panel (copy from main site) -->
+    <div id="selectedServicesPanel" class="fixed bottom-20 right-0 bg-white p-4 rounded-lg shadow-lg max-w-sm w-80 transform translate-x-full transition-transform duration-300 z-30 border border-gray-200">
+        <div class="flex items-center justify-between mb-3">
+            <h3 class="font-semibold text-gray-800">Serviços Selecionados</h3>
+            <button id="closePanelBtn" class="text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul id="selectedServicesList" class="text-sm mb-4 max-h-32 overflow-y-auto">
+            <li>Pintura Industrial</li>
+            <li>Pintura Automotiva</li>
+        </ul>
+        <div class="space-y-2">
+            <button class="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg">
+                <i class="fab fa-whatsapp mr-2"></i>
+                Enviar via WhatsApp
+            </button>
+            <button class="w-full bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-lg text-sm">
+                <i class="fas fa-trash mr-2"></i>
+                Limpar Tudo
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function showServicesPanel() {
+            const panel = document.getElementById('selectedServicesPanel');
+            if (panel) {
+                panel.style.right = '1.5rem';
+                panel.style.opacity = '1';
+                panel.style.pointerEvents = 'auto';
+                panel.classList.remove('translate-x-full');
+                panel.classList.add('translate-x-0');
+            }
+        }
+
+        function hideServicesPanel() {
+            const panel = document.getElementById('selectedServicesPanel');
+            if (panel) {
+                panel.style.right = '0';
+                panel.style.opacity = '0';
+                panel.style.pointerEvents = 'none';
+                panel.classList.add('translate-x-full');
+                panel.classList.remove('translate-x-0');
+            }
+        }
+
+        function showToast() {
+            const toast = document.getElementById('serviceToast');
+            if (toast) {
+                toast.style.right = '1rem';
+                toast.style.opacity = '1';
+                toast.style.pointerEvents = 'auto';
+                toast.classList.remove('translate-x-full');
+                toast.classList.add('translate-x-0');
+            }
+        }
+
+        function hideToast() {
+            const toast = document.getElementById('serviceToast');
+            if (toast) {
+                toast.style.right = '0';
+                toast.style.opacity = '0';
+                toast.style.pointerEvents = 'none';
+                toast.classList.add('translate-x-full');
+                toast.classList.remove('translate-x-0');
+            }
+        }
+
+        function checkStatus() {
+            const panel = document.getElementById('selectedServicesPanel');
+            const toast = document.getElementById('serviceToast');
+            const status = document.getElementById('status');
+            
+            const panelInfo = {
+                right: panel.style.right,
+                opacity: panel.style.opacity,
+                transform: getComputedStyle(panel).transform,
+                classes: panel.className
+            };
+            
+            const toastInfo = {
+                right: toast.style.right,
+                opacity: toast.style.opacity,
+                transform: getComputedStyle(toast).transform,
+                classes: toast.className
+            };
+            
+            status.innerHTML = `
+                <strong>Status dos Popups:</strong><br>
+                <strong>Painel:</strong> right: ${panelInfo.right}, opacity: ${panelInfo.opacity}<br>
+                <strong>Toast:</strong> right: ${toastInfo.right}, opacity: ${toastInfo.opacity}<br>
+                <br>
+                <strong>Classes Painel:</strong> ${panelInfo.classes}<br>
+                <strong>Classes Toast:</strong> ${toastInfo.classes}
+            `;
+        }
+
+        // Event listeners
+        document.getElementById('showPanel').addEventListener('click', showServicesPanel);
+        document.getElementById('hidePanel').addEventListener('click', hideServicesPanel);
+        document.getElementById('showToast').addEventListener('click', showToast);
+        document.getElementById('hideToast').addEventListener('click', hideToast);
+        document.getElementById('checkStatus').addEventListener('click', checkStatus);
+        
+        // Initial status check
+        checkStatus();
+    </script>
+</body>
+</html> 

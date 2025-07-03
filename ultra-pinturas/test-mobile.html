@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Menu Mobile - Ultra Pinturas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <h1 class="text-center p-4 text-2xl font-bold">Teste do Menu Mobile</h1>
+    
+    <!-- Navbar simplificado -->
+    <nav class="bg-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold">Ultra Pinturas</div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+                    <i class="fas fa-bars text-gray-700"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="lg:hidden hidden border-t border-gray-200 py-4">
+                <div class="space-y-4">
+                    <a href="#" class="block text-gray-700">Início</a>
+                    <a href="#" class="block text-gray-700">Sobre</a>
+                    <a href="#" class="block text-gray-700">Serviços</a>
+                    <a href="#" class="block text-gray-700">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="p-4">
+        <p class="mb-4">Este é um teste simples do menu mobile.</p>
+        <p class="mb-4">Em telas pequenas, você deve ver o botão hambúrguer (☰) no canto superior direito.</p>
+        <p class="mb-4">Clique nele para abrir/fechar o menu.</p>
+        
+        <div id="status" class="mt-4 p-4 bg-blue-100 rounded">
+            Verificando funcionalidade...
+        </div>
+    </div>
+
+    <script>
+        console.log('🧪 Teste do menu mobile iniciado');
+        
+        function testMobileMenu() {
+            const toggle = document.getElementById('mobileMenuToggle');
+            const menu = document.getElementById('mobileMenu');
+            const status = document.getElementById('status');
+            
+            console.log('Toggle encontrado:', !!toggle);
+            console.log('Menu encontrado:', !!menu);
+            
+            if (toggle && menu) {
+                toggle.addEventListener('click', function() {
+                    console.log('🍔 Botão clicado!');
+                    menu.classList.toggle('hidden');
+                    
+                    const icon = this.querySelector('i');
+                    if (menu.classList.contains('hidden')) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                        status.textContent = '✅ Menu fechado';
+                        status.className = 'mt-4 p-4 bg-red-100 rounded';
+                    } else {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                        status.textContent = '✅ Menu aberto';
+                        status.className = 'mt-4 p-4 bg-green-100 rounded';
+                    }
+                });
+                
+                status.textContent = '✅ Menu mobile está funcionando! Clique no ☰ para testar.';
+                status.className = 'mt-4 p-4 bg-green-100 rounded';
+            } else {
+                status.textContent = '❌ Erro: elementos não encontrados';
+                status.className = 'mt-4 p-4 bg-red-100 rounded';
+            }
+        }
+        
+        // Testar imediatamente
+        document.addEventListener('DOMContentLoaded', testMobileMenu);
+    </script>
+</body>
+</html> 

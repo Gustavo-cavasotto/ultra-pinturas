@@ -1,0 +1,58 @@
+<nav class="fixed top-0 w-full bg-accent/95 dark:bg-primary/95 backdrop-blur-sm shadow-lg z-30 transition-all duration-300">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
+                    <i class="fas fa-paint-brush text-accent text-lg"></i>
+                </div>
+                <span class="text-xl font-bold text-primary dark:text-accent">Ultra Pinturas</span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex space-x-8">
+                <a href="#home" class="nav-link text-dark-gray dark:text-accent hover:text-secondary dark:hover:text-secondary transition-colors font-medium">Início</a>
+                <a href="#sobre" class="nav-link text-dark-gray dark:text-accent hover:text-secondary dark:hover:text-secondary transition-colors font-medium">Sobre</a>
+                <a href="#servicos" class="nav-link text-dark-gray dark:text-accent hover:text-secondary dark:hover:text-secondary transition-colors font-medium">Serviços</a>
+                <a href="#diferenciais" class="nav-link text-dark-gray dark:text-accent hover:text-secondary dark:hover:text-secondary transition-colors font-medium">Diferenciais</a>
+                <a href="#clientes" class="nav-link text-dark-gray dark:text-accent hover:text-secondary dark:hover:text-secondary transition-colors font-medium">Clientes</a>
+                <a href="#galeria" class="nav-link text-dark-gray dark:text-accent hover:text-secondary dark:hover:text-secondary transition-colors font-medium">Galeria</a>
+                <a href="#contato" class="nav-link text-dark-gray dark:text-accent hover:text-secondary dark:hover:text-secondary transition-colors font-medium">Contato</a>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center space-x-4"> 
+                <!-- Dark Mode Toggle -->
+                <button id="darkModeToggle" class="p-2 rounded-full hover:bg-light-gray dark:hover:bg-gray-700 transition-colors" aria-label="Alternar modo escuro">
+                    <i class="fas fa-moon text-dark-gray dark:text-accent"></i>
+                </button>
+
+                <!-- CTA Button -->
+                <a href="#contato" class="hidden md:inline-block bg-secondary hover:bg-primary text-accent px-6 py-2 rounded-full font-semibold transition-all duration-300 hover:transform hover:scale-105">
+                    Solicitar Orçamento
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-md hover:bg-light-gray dark:hover:bg-gray-700 transition-colors" aria-label="Menu mobile">
+                    <i class="fas fa-bars text-dark-gray dark:text-accent"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="lg:hidden hidden border-t border-gray-200 dark:border-gray-700 py-4">
+            <div class="space-y-4">
+                <a href="#home" class="block text-dark-gray dark:text-accent hover:text-secondary dark:hover:text-secondary transition-colors font-medium">Início</a>
+                <a href="#sobre" class="block text-dark-gray dark:text-accent hover:text-secondary dark:hover:text-secondary transition-colors font-medium">Sobre</a>
+                <a href="#servicos" class="block text-dark-gray dark:text-accent hover:text-secondary dark:hover:text-secondary transition-colors font-medium">Serviços</a>
+                <a href="#diferenciais" class="block text-dark-gray dark:text-accent hover:text-secondary dark:hover:text-secondary transition-colors font-medium">Diferenciais</a>
+                <a href="#clientes" class="block text-dark-gray dark:text-accent hover:text-secondary dark:hover:text-secondary transition-colors font-medium">Clientes</a>
+                <a href="#galeria" class="block text-dark-gray dark:text-accent hover:text-secondary dark:hover:text-secondary transition-colors font-medium">Galeria</a>
+                <a href="#contato" class="block text-dark-gray dark:text-accent hover:text-secondary dark:hover:text-secondary transition-colors font-medium">Contato</a>
+                <a href="#contato" class="block bg-secondary hover:bg-primary text-accent px-6 py-2 rounded-full font-semibold transition-all duration-300 text-center mt-4">
+                    Solicitar Orçamento
+                </a>
+            </div>
+        </div>
+    </div>
+</nav> 

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ultra Pinturas Especiais - Excelência em pintura industrial, automotiva e plásticos técnicos. Serviços terceirizados de alta qualidade.">
+    <meta name="keywords" content="pintura industrial, pintura automotiva, plásticos técnicos, serviços terceirizados, Ultra Pinturas">
+    <meta name="author" content="Ultra Pinturas Especiais">
+    <meta property="og:title" content="Ultra Pinturas Especiais - Pintura Industrial e Automotiva">
+    <meta property="og:description" content="Excelência em pintura industrial, automotiva e plásticos técnicos">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ultrapinturas.com.br">
+    
+    <title>Ultra Pinturas Especiais - Pintura Industrial e Automotiva</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0F1F3D',
+                        'secondary': '#1C4E80',
+                        'accent': '#FFFFFF',
+                        'light-gray': '#F4F6F8',
+                        'dark-gray': '#333333'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+</head>
+
+<body class="font-poppins bg-accent text-dark-gray dark:bg-primary dark:text-accent transition-colors duration-300">
+    <!-- Loader removido conforme solicitado -->
+
+    <!-- Progress Bar -->
+    <div id="progressBar" class="fixed top-0 left-0 h-1 bg-secondary z-40 transition-all duration-300" style="width: 0%"></div>
+
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home">
+            <div id="hero-container"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre">
+            <div id="about-container"></div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicos">
+            <div id="services-container"></div>
+        </section>
+
+        <!-- Diferenciais Section -->
+        <section id="diferenciais">
+            <div id="diferencial-container"></div>
+        </section>
+
+        <!-- Clients Section -->
+        <section id="clientes">
+            <div id="clients-container"></div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certificacoes">
+            <div id="certifications-container"></div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="galeria">
+            <div id="gallery-container"></div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div id="faq-container"></div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato">
+            <div id="contact-container"></div>
+        </section>
+
+        <!-- Map Section -->
+        <section id="localizacao">
+            <div id="map-container"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5551995273661" target="_blank" 
+       class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-30"
+       aria-label="Contato via WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Service Selection Toast -->
+    <div id="serviceToast" class="fixed top-20 right-0 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-40">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle mr-2"></i>
+            <span>Serviço adicionado à solicitação!</span>
+        </div>
+    </div>
+
+    <!-- Selected Services Panel -->
+    <div id="selectedServicesPanel" class="fixed bottom-20 right-0 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg max-w-sm w-80 transform translate-x-full transition-transform duration-300 z-30 border border-gray-200 dark:border-gray-600">
+        <div class="flex items-center justify-between mb-3">
+            <h3 class="font-semibold text-gray-800 dark:text-gray-200">Serviços Selecionados</h3>
+            <button id="closePanelBtn" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul id="selectedServicesList" class="text-sm mb-4 max-h-32 overflow-y-auto"></ul>
+        <div class="space-y-2">
+            <button id="sendWhatsApp" class="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg transition-colors font-medium">
+                <i class="fab fa-whatsapp mr-2"></i>
+                Enviar via WhatsApp
+            </button>
+            <button id="clearServices" class="w-full bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-lg text-sm transition-colors">
+                <i class="fas fa-trash mr-2"></i>
+                Limpar Tudo
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="./js/main.js"></script>
+    <script src="./js/services-interaction.js"></script>
+    <script src="./js/form-validation.js"></script>
+    <script src="./js/darkmode-toggle.js"></script>
+
+    <!-- Component Loader Script -->
+    <script>
+        // Load all components
+        async function loadComponents() {
+            const components = [
+                { id: 'navbar-container', file: './components/navbar.html' },
+                { id: 'hero-container', file: './components/hero.html' },
+                { id: 'about-container', file: './components/about.html' },
+                { id: 'services-container', file: './components/services.html' },
+                { id: 'diferencial-container', file: './components/diferencial.html' },
+                { id: 'clients-container', file: './components/clients.html' },
+                { id: 'certifications-container', file: './components/certifications.html' },
+                { id: 'gallery-container', file: './components/gallery.html' },
+                { id: 'faq-container', file: './components/faq.html' },
+                { id: 'contact-container', file: './components/contact.html' },
+                { id: 'map-container', file: './components/map.html' },
+                { id: 'footer-container', file: './components/footer.html' }
+            ];
+
+            for (const component of components) {
+                try {
+                    const response = await fetch(component.file);
+                    const html = await response.text();
+                    document.getElementById(component.id).innerHTML = html;
+                } catch (error) {
+                    console.error(`Erro ao carregar componente ${component.file}:`, error);
+                }
+            }
+
+            // Initialize all functionalities after components are loaded
+            initializeAfterLoad();
+            
+            // Extra debug - Force mobile menu setup after a delay
+            setTimeout(() => {
+                console.log('🔍 Verificação final do menu mobile...');
+                const toggle = document.getElementById('mobileMenuToggle');
+                const menu = document.getElementById('mobileMenu');
+                console.log('Toggle final:', !!toggle);
+                console.log('Menu final:', !!menu);
+                
+                if (toggle && menu) {
+                    console.log('✅ Elementos do menu mobile estão presentes!');
+                } else {
+                    console.error('❌ Elementos do menu mobile ainda não estão disponíveis!');
+                }
+            }, 1000);
+        }
+
+        // Initialize app
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponents();
+        });
+        
+        // Initialize all functionalities after components are loaded
+        function initializeAfterLoad() {
+            // Wait a bit for components to be fully rendered
+            setTimeout(() => {
+                // Re-initialize mobile menu (CRITICAL for mobile navigation)
+                if (typeof setupMobileMenu === 'function') {
+                    setupMobileMenu();
+                    console.log('✅ Menu mobile inicializado');
+                }
+                
+                // Re-initialize services interaction if function exists
+                if (typeof initializeServicesInteraction === 'function') {
+                    initializeServicesInteraction();
+                }
+                
+                // Re-initialize dark mode if function exists
+                if (typeof initializeDarkMode === 'function') {
+                    initializeDarkMode();
+                }
+                
+                // Re-initialize form validation if function exists
+                if (typeof initializeFormValidation === 'function') {
+                    initializeFormValidation();
+                }
+                
+                // Re-initialize other main functions
+                if (typeof setupSmoothScrolling === 'function') {
+                    setupSmoothScrolling();
+                }
+                
+                if (typeof setupFAQAccordion === 'function') {
+                    setupFAQAccordion();
+                }
+                
+                if (typeof setupMapActions === 'function') {
+                    setupMapActions();
+                }
+                
+                // Force hide all popups after everything is loaded
+                if (typeof hideAllPopups === 'function') {
+                    hideAllPopups();
+                }
+                
+                console.log('✅ Todas as funcionalidades foram inicializadas após carregamento dos componentes');
+            }, 200);
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,206 @@
+<section class="py-20 bg-accent dark:bg-primary">
+    <div class="container mx-auto px-4">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary dark:text-accent mb-6">
+                Entre em <span class="text-secondary">Contato</span>
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Pronto para transformar seu projeto? Entre em contato conosco e receba um orçamento 
+                personalizado para suas necessidades de pintura especializada.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <!-- Contact Form -->
+            <div class="bg-light-gray dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold text-primary dark:text-accent mb-6">Solicite seu Orçamento</h3>
+                
+                <form id="contactForm" class="space-y-6">
+                    <!-- Nome -->
+                    <div>
+                        <label for="name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            Nome Completo *
+                        </label>
+                        <input type="text" id="name" name="name" required
+                               class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent bg-accent dark:bg-gray-700 text-gray-900 dark:text-accent transition-colors"
+                               placeholder="Seu nome completo">
+                        <span class="error-message text-red-500 text-sm hidden"></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            E-mail *
+                        </label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent bg-accent dark:bg-gray-700 text-gray-900 dark:text-accent transition-colors"
+                               placeholder="seu@email.com">
+                        <span class="error-message text-red-500 text-sm hidden"></span>
+                    </div>
+
+                    <!-- Telefone -->
+                    <div>
+                        <label for="phone" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            Telefone/WhatsApp *
+                        </label>
+                        <input type="tel" id="phone" name="phone" required
+                               class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent bg-accent dark:bg-gray-700 text-gray-900 dark:text-accent transition-colors"
+                               placeholder="(51) 99527-3661">
+                        <span class="error-message text-red-500 text-sm hidden"></span>
+                    </div>
+
+                    <!-- Empresa -->
+                    <div>
+                        <label for="company" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            Empresa
+                        </label>
+                        <input type="text" id="company" name="company"
+                               class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent bg-accent dark:bg-gray-700 text-gray-900 dark:text-accent transition-colors"
+                               placeholder="Nome da sua empresa">
+                    </div>
+
+                    <!-- Tipo de Serviço -->
+                    <div>
+                        <label for="service" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            Tipo de Serviço *
+                        </label>
+                        <select id="service" name="service" required
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent bg-accent dark:bg-gray-700 text-gray-900 dark:text-accent transition-colors">
+                            <option value="">Selecione o tipo de serviço</option>
+                            <option value="Pintura Industrial">Pintura Industrial</option>
+                            <option value="Pintura Automotiva">Pintura Automotiva</option>
+                            <option value="Plásticos Técnicos">Plásticos Técnicos</option>
+                            <option value="Consultoria Técnica">Consultoria Técnica</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                        <span class="error-message text-red-500 text-sm hidden"></span>
+                    </div>
+
+                    <!-- Mensagem -->
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                            Descreva seu Projeto *
+                        </label>
+                        <textarea id="message" name="message" rows="4" required
+                                  class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent bg-accent dark:bg-gray-700 text-gray-900 dark:text-accent transition-colors resize-none"
+                                  placeholder="Descreva detalhes do seu projeto: tipo de peça, dimensões, quantidade, prazo desejado, etc."></textarea>
+                        <span class="error-message text-red-500 text-sm hidden"></span>
+                    </div>
+
+                    <!-- Privacy Checkbox -->
+                    <div class="flex items-start space-x-3">
+                        <input type="checkbox" id="privacy" name="privacy" required
+                               class="mt-1 w-4 h-4 text-secondary bg-accent dark:bg-gray-700 border-gray-300 dark:border-gray-600 rounded focus:ring-secondary">
+                        <label for="privacy" class="text-sm text-gray-600 dark:text-gray-300">
+                            Aceito os termos de privacidade e autorizo o contato para fins comerciais. *
+                        </label>
+                    </div>
+
+                    <!-- Submit Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        
+                        <button type="button" id="sendWhatsAppDirect"
+                                class="flex-1 bg-green-500 hover:bg-green-600 text-accent py-3 px-6 rounded-full font-bold transition-all duration-300 hover:transform hover:scale-105 flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            WhatsApp Direto
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Form Status -->
+                <div id="formStatus" class="mt-6 p-4 rounded-lg hidden">
+                    <div id="statusMessage" class="flex items-center">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        <span>Mensagem enviada com sucesso!</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="space-y-8">
+                <!-- Contact Cards -->
+                <div class="grid gap-6">
+                    <!-- Phone -->
+                    <div class="bg-light-gray dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-phone text-2xl text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary dark:text-accent">Telefone</h4>
+                                <p class="text-gray-600 dark:text-gray-300">(51) 99527-3661</p>
+                                <p class="text-sm text-gray-500">Segunda a Sexta: 8h às 18h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="bg-light-gray dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-2xl text-green-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary dark:text-accent">WhatsApp</h4>
+                                <p class="text-gray-600 dark:text-gray-300">(51) 99527-3661</p>
+                                <p class="text-sm text-gray-500">Disponível 24h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="bg-light-gray dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-envelope text-2xl text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary dark:text-accent">E-mail</h4>
+                                <p class="text-gray-600 dark:text-gray-300">contato@ultrapinturas.com.br</p>
+                                <p class="text-sm text-gray-500">Resposta em até 24h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="bg-light-gray dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-2xl text-red-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-primary dark:text-accent">Endereço</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Rua Industrial, 123 - Distrito Industrial</p>
+                                <p class="text-gray-600 dark:text-gray-300">São Paulo - SP, 01234-567</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Hours -->
+                <div class="bg-gradient-to-r from-secondary to-primary rounded-xl p-6 text-accent">
+                    <h4 class="text-lg font-semibold mb-4">Horário de Funcionamento</h4>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Segunda a Quinta:</span>
+                            <span>8h às 18h</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Sexta-feira:</span>
+                            <span>8h às 17h</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Sábado:</span>
+                            <span>8h às 12h</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Domingo:</span>
+                            <span>Fechado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

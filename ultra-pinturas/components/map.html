@@ -1,0 +1,151 @@
+<section class="py-20 bg-light-gray dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-primary dark:text-accent mb-6">
+                Nossa <span class="text-secondary">Localização</span>
+            </h2>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Visite nossas instalações modernas e conheça de perto nossos processos, 
+                equipamentos e padrões de qualidade que fazem da Ultra Pinturas referência no mercado.
+            </p>
+        </div>
+
+        <!-- Map Section -->
+        <div class="grid lg:grid-cols-3 gap-12 items-start">
+            <!-- Map Container -->
+            <div class="lg:col-span-2">
+                <div class="bg-accent dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
+                    <!-- Map Placeholder -->
+                    <div class="relative h-96 lg:h-[500px] bg-gray-300 dark:bg-gray-700">
+                        <!-- Google Maps Embed -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.06621939767!2d-51.182430599999996!3d-29.133237200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea2ae1c96d40f%3A0x5b5b557d072efea5!2sUltra%20Pinturas%20Especiais!5e0!3m2!1spt-BR!2sbr!4v1751518514471!5m2!1spt-BR!2sbr" 
+                               width="100%" 
+                               height="100%" 
+                               style="border:0;" 
+                               allowfullscreen="" 
+                               loading="lazy" 
+                               referrerpolicy="no-referrer-when-downgrade"
+                               class="absolute inset-0 w-full h-full">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                    <button id="getDirections" class="flex-1 bg-secondary hover:bg-primary text-accent py-3 px-6 rounded-full font-bold transition-all duration-300 hover:transform hover:scale-105 flex items-center justify-center">
+                        <i class="fas fa-directions mr-2"></i>
+                        Traçar Rota
+                    </button>
+                    <button id="shareLocation" class="flex-1 bg-blue-500 hover:bg-blue-600 text-accent py-3 px-6 rounded-full font-bold transition-all duration-300 hover:transform hover:scale-105 flex items-center justify-center">
+                        <i class="fas fa-share mr-2"></i>
+                        Compartilhar
+                    </button>
+                    <button id="downloadVcard" class="flex-1 bg-gray-500 hover:bg-gray-600 text-accent py-3 px-6 rounded-full font-bold transition-all duration-300 hover:transform hover:scale-105 flex items-center justify-center">
+                        <i class="fas fa-download mr-2"></i>
+                        Baixar Contato
+                    </button>
+                </div>
+            </div>
+
+            <!-- Location Info -->
+            <div class="space-y-6">
+                <!-- Address Card -->
+                <div class="bg-accent dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-red-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Endereço Completo</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-1">Rua Industrial, 123</p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-1">Distrito Industrial</p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">São Paulo - SP</p>
+                            <p class="text-gray-600 dark:text-gray-300 font-semibold">CEP: 01234-567</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transportation -->
+                <div class="bg-accent dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-route text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-primary dark:text-accent mb-3">Como Chegar</h3>
+                            <div class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                                <div class="flex items-center">
+                                    <i class="fas fa-car mr-2 text-gray-400"></i>
+                                    <span>15 min do centro da cidade</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-subway mr-2 text-gray-400"></i>
+                                    <span>Estação Metro Industrial (500m)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-bus mr-2 text-gray-400"></i>
+                                    <span>Linhas 123, 456, 789</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-parking mr-2 text-gray-400"></i>
+                                    <span>Estacionamento gratuito</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visit Info -->
+                <div class="bg-accent dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-calendar-check text-green-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-primary dark:text-accent mb-3">Visitas Técnicas</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                                Agende uma visita às nossas instalações e conheça nossos processos de perto.
+                            </p>
+                            <div class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                                <div class="flex justify-between">
+                                    <span>Segunda a Sexta:</span>
+                                    <span class="font-medium">8h às 17h</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Sábado:</span>
+                                    <span class="font-medium">8h às 12h</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Agendamento:</span>
+                                    <span class="font-medium">Obrigatório</span>
+                                </div>
+                            </div>
+                            <a href="#contato" class="inline-block mt-4 bg-green-500 hover:bg-green-600 text-accent px-4 py-2 rounded-full text-sm font-semibold transition-colors">
+                                <i class="fas fa-phone mr-1"></i>
+                                Agendar Visita
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safety Notice -->
+                <div class="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-4">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mt-1"></i>
+                        <div>
+                            <h4 class="text-sm font-semibold text-yellow-700 dark:text-yellow-400 mb-1">
+                                Área Industrial
+                            </h4>
+                            <p class="text-yellow-600 dark:text-yellow-300 text-xs">
+                                Por medidas de segurança, todas as visitas devem ser previamente agendadas. 
+                                É obrigatório o uso de EPIs fornecidos pela empresa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
