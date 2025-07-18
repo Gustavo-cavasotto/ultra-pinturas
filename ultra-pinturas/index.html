@@ -15,6 +15,10 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="./assets/icons/site.webmanifest">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +33,12 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Responsive Carousel CSS -->
+    <link rel="stylesheet" href="./assets/css/responsive-carousel.css">
+    
+    <!-- About Card Styles CSS -->
+    <link rel="stylesheet" href="./assets/css/about-card-styles.css">
     
     <!-- Tailwind Config -->
     <script>
@@ -68,6 +78,11 @@
             <div id="hero-container"></div>
         </section>
 
+        <!-- Video Institucional Section -->
+        <section id="video">
+            <div id="video-container"></div>
+        </section>
+
         <!-- About Section -->
         <section id="sobre">
             <div id="about-container"></div>
@@ -83,10 +98,7 @@
             <div id="diferencial-container"></div>
         </section>
 
-        <!-- Clients Section -->
-        <section id="clientes">
-            <div id="clients-container"></div>
-        </section>
+
 
         <!-- Certifications Section -->
         <section id="certificacoes">
@@ -158,6 +170,9 @@
     <script src="./js/services-interaction.js"></script>
     <script src="./js/form-validation.js"></script>
     <script src="./js/darkmode-toggle.js"></script>
+    <script src="./assets/js/hero-carousel.js"></script>
+    <script src="./assets/js/carousel-debug.js"></script>
+    <script src="./assets/js/carousel-fix.js"></script>
 
     <!-- Component Loader Script -->
     <script>
@@ -166,10 +181,10 @@
             const components = [
                 { id: 'navbar-container', file: './components/navbar.html' },
                 { id: 'hero-container', file: './components/hero.html' },
+                { id: 'video-container', file: './components/video-institucional.html' },
                 { id: 'about-container', file: './components/about.html' },
                 { id: 'services-container', file: './components/services.html' },
                 { id: 'diferencial-container', file: './components/diferencial.html' },
-                { id: 'clients-container', file: './components/clients.html' },
                 { id: 'certifications-container', file: './components/certifications.html' },
                 { id: 'gallery-container', file: './components/gallery.html' },
                 { id: 'faq-container', file: './components/faq.html' },
@@ -253,6 +268,12 @@
                 // Force hide all popups after everything is loaded
                 if (typeof hideAllPopups === 'function') {
                     hideAllPopups();
+                }
+                
+                // Initialize hero carousel
+                if (typeof window.initHeroCarousel === 'function') {
+                    window.initHeroCarousel();
+                    console.log('✅ Hero Carousel inicializado');
                 }
                 
                 console.log('✅ Todas as funcionalidades foram inicializadas após carregamento dos componentes');

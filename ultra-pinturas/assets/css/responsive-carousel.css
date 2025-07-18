@@ -1,0 +1,264 @@
+/* ===========================================
+   RESPONSIVE CAROUSEL STYLES - ULTRA PINTURAS
+   =========================================== */
+
+/* Desktop - Padrão (mantém estilos atuais) */
+.carousel-slide {
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
+
+/* Tablet - Ajustes médios */
+@media (max-width: 1024px) {
+    .carousel-slide {
+        transform: scale(1.05) !important;
+    }
+    
+    /* Ajuste altura do hero para tablet */
+    section.min-h-\[110vh\] {
+        min-height: 100vh !important;
+    }
+}
+
+/* Mobile - Otimizações específicas */
+@media (max-width: 768px) {
+    /* Reduzir escala das imagens para melhor enquadramento */
+    .carousel-slide {
+        transform: scale(1.0) !important;
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+    
+    /* Ajustes específicos por imagem para mobile */
+    .carousel-slide:nth-child(1) {
+        /* Hero-bg.jpg - foco central */
+        background-position: center center !important;
+    }
+    
+    .carousel-slide:nth-child(2) {
+        /* Cabine - manter centro */
+        background-position: center center !important;
+    }
+    
+    .carousel-slide:nth-child(3) {
+        /* Figure gold - foco no objeto */
+        background-position: center 40% !important;
+    }
+    
+    .carousel-slide:nth-child(4) {
+        /* IMG_8515 - ajustar para mostrar melhor parte */
+        background-position: center 40% !important;
+    }
+    
+    .carousel-slide:nth-child(5) {
+        /* IMG_8510 - equipamentos */
+        background-position: center center !important;
+    }
+    
+    .carousel-slide:nth-child(6) {
+        /* F1-red-2 - foco no carro */
+        background-position: center 30% !important;
+    }
+    
+    .carousel-slide:nth-child(7) {
+        /* F1-3 - prateleira */
+        background-position: center center !important;
+    }
+    
+    .carousel-slide:nth-child(8) {
+        /* Foto facas - foco nos detalhes */
+        background-position: center 45% !important;
+    }
+    
+    .carousel-slide:nth-child(9) {
+        /* IMG_8538 - parachoque */
+        background-position: center 35% !important;
+    }
+    
+    /* Ajuste altura do hero para mobile */
+    section.min-h-\[110vh\] {
+        min-height: 100vh !important;
+        padding-top: 60px !important;
+    }
+    
+    /* Reduzir espaçamento interno do container */
+    .container.mx-auto.px-5 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    /* Ajustar títulos para mobile */
+    .text-4xl.md\:text-5xl.lg\:text-6xl {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    /* Ajustar parágrafo para mobile */
+    .text-xl.md\:text-2xl {
+        font-size: 1.125rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    /* Melhorar botões para mobile */
+    .flex.flex-col.sm\:flex-row.gap-4 a {
+        font-size: 1rem !important;
+        padding: 1rem 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    /* Controles do carrossel - mobile */
+    .absolute.bottom-8.left-1\/2 {
+        bottom: 1rem !important;
+    }
+    
+    .carousel-indicator {
+        width: 0.625rem !important;
+        height: 0.625rem !important;
+    }
+    
+    /* CORREÇÃO DOS BOTÕES DE NAVEGAÇÃO - MOBILE */
+    button#prevSlide,
+    button#nextSlide {
+        /* Posicionamento seguro para mobile */
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        padding: 0.75rem !important;
+        width: 3rem !important;
+        height: 3rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        
+        /* Visual melhorado */
+        background-color: rgba(255, 255, 255, 0.4) !important;
+        border: 1px solid rgba(255, 255, 255, 0.6) !important;
+        backdrop-filter: blur(8px) !important;
+        border-radius: 50% !important;
+        
+        /* Z-index garantido */
+        z-index: 35 !important;
+    }
+    
+    button#prevSlide {
+        left: 1rem !important;
+    }
+    
+    button#nextSlide {
+        right: 1rem !important;
+    }
+    
+    /* Hover/touch effects para mobile */
+    button#prevSlide:hover,
+    button#nextSlide:hover,
+    button#prevSlide:active,
+    button#nextSlide:active {
+        background-color: rgba(255, 255, 255, 0.7) !important;
+        transform: translateY(-50%) scale(1.05) !important;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+    }
+    
+    /* Ícones dos botões */
+    button#prevSlide i,
+    button#nextSlide i {
+        font-size: 1rem !important;
+        color: white !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    button#prevSlide:hover i,
+    button#nextSlide:hover i {
+        transform: scale(1.1) !important;
+        color: rgba(15, 31, 61, 0.9) !important; /* primary color */
+    }
+}
+
+/* Mobile pequeno - ajustes extras */
+@media (max-width: 480px) {
+    /* Escala ainda menor para telas muito pequenas */
+    .carousel-slide {
+        transform: scale(1.0) !important;
+    }
+
+    /* Títulos ainda menores */
+    .text-4xl.md\:text-5xl.lg\:text-6xl {
+        font-size: 2rem !important;
+    }
+    
+    /* Botões menores */
+    .flex.flex-col.sm\:flex-row.gap-4 a {
+        font-size: 0.875rem !important;
+        padding: 0.875rem 1.25rem !important;
+    }
+    
+    /* Hero height para telas muito pequenas */
+    section.min-h-\[110vh\] {
+        min-height: 90vh !important;
+    }
+    
+    /* Botões de navegação ainda menores para telas muito pequenas */
+    button#prevSlide,
+    button#nextSlide {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+        padding: 0.5rem !important;
+    }
+    
+    button#prevSlide {
+        left: 0.5rem !important;
+    }
+    
+    button#nextSlide {
+        right: 0.5rem !important;
+    }
+    
+    button#prevSlide i,
+    button#nextSlide i {
+        font-size: 0.875rem !important;
+    }
+}
+
+/* Otimizações para performance em mobile */
+@media (max-width: 768px) {
+    /* Reduzir animações em mobile para melhor performance */
+    .carousel-slide {
+        transition: opacity 0.5s ease-in-out !important;
+    }
+    
+    /* Reduzir blur em elementos decorativos */
+    .absolute.top-1\/4.left-10,
+    .absolute.bottom-1\/3.right-16,
+    .absolute.top-1\/2.right-1\/4 {
+        opacity: 0.3 !important;
+        transform: scale(0.7) !important;
+    }
+}
+
+/* Landscape mobile - ajustes para orientação paisagem */
+@media (max-width: 768px) and (orientation: landscape) {
+    section.min-h-\[110vh\] {
+        min-height: 100vh !important;
+        padding-top: 40px !important;
+    }
+    
+    .text-4xl.md\:text-5xl.lg\:text-6xl {
+        font-size: 2.25rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .text-xl.md\:text-2xl {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .flex.flex-col.sm\:flex-row.gap-4 {
+        margin-bottom: 2rem !important;
+    }
+    
+    /* Ajustar botões para landscape */
+    button#prevSlide,
+    button#nextSlide {
+        width: 2.75rem !important;
+        height: 2.75rem !important;
+    }
+} 

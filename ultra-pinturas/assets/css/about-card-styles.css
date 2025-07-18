@@ -1,0 +1,147 @@
+/* ===========================================
+   ABOUT CARD STYLES - ULTRA PINTURAS
+   Estilos específicos para o card "Instalações Modernas"
+   =========================================== */
+
+/* Animações personalizadas */
+@keyframes float-gentle {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(255, 212, 42, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(255, 212, 42, 0.5); }
+}
+
+/* Container do card de instalações */
+.instalacoes-card {
+    animation: float-gentle 6s ease-in-out infinite;
+}
+
+/* Efeitos na imagem */
+.instalacoes-card img {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.instalacoes-card:hover img {
+    transform: scale(1.08) !important;
+    filter: brightness(1.1) contrast(1.1);
+}
+
+/* Badge de sustentabilidade */
+.sustainability-badge {
+    animation: glow-pulse 3s ease-in-out infinite;
+    backdrop-filter: blur(10px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Ajustar card para mobile */
+    .instalacoes-card .bg-gradient-to-br {
+        padding: 1.5rem !important;
+    }
+    
+    /* Imagem responsiva no mobile */
+    .instalacoes-card .aspect-\[4\/3\] {
+        aspect-ratio: 16/10 !important;
+    }
+    
+    /* Texto menor no mobile */
+    .instalacoes-card h4 {
+        font-size: 1.5rem !important;
+    }
+    
+    .instalacoes-card p {
+        font-size: 1rem !important;
+    }
+    
+    /* Indicadores menores no mobile */
+    .instalacoes-card .flex.justify-center {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile pequeno - ajustes extras */
+    .instalacoes-card .max-w-md {
+        max-width: 100% !important;
+        padding: 0.75rem !important;
+    }
+    
+    /* Badge menor */
+    .sustainability-badge {
+        padding: 0.25rem 0.75rem !important;
+        font-size: 0.625rem !important;
+    }
+}
+
+/* Hover effects melhorados */
+@media (hover: hover) {
+    .instalacoes-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .instalacoes-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Efeito no background do card */
+    .instalacoes-card:hover .bg-gradient-to-br {
+        background: linear-gradient(to bottom right, 
+            rgb(28, 78, 128) 0%, 
+            rgb(15, 31, 61) 50%,
+            rgb(28, 78, 128) 100%) !important;
+    }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    .instalacoes-card .bg-white\/90 {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+    }
+    
+    .sustainability-badge {
+        box-shadow: 0 0 20px rgba(255, 212, 42, 0.4);
+    }
+}
+
+/* Otimizações de performance */
+.instalacoes-card * {
+    will-change: transform;
+}
+
+.instalacoes-card img {
+    will-change: transform, filter;
+}
+
+/* Elementos decorativos aprimorados */
+.instalacoes-card .absolute.animate-pulse {
+    animation: glow-pulse 4s ease-in-out infinite;
+}
+
+/* Garantir que os elementos decorativos não atrapalhem a interação */
+.instalacoes-card .absolute:not(.sustainability-badge) {
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Container principal sempre acima dos elementos decorativos */
+.instalacoes-card .bg-gradient-to-br {
+    position: relative;
+    z-index: 10;
+}
+
+/* Melhorar legibilidade no mobile */
+@media (max-width: 768px) {
+    .instalacoes-card .opacity-90 {
+        opacity: 1 !important;
+        font-weight: 500 !important;
+    }
+    
+    .instalacoes-card .opacity-80 {
+        opacity: 0.95 !important;
+    }
+} 

@@ -11,273 +11,151 @@
             </p>
         </div>
 
-        <!-- Gallery Filter -->
-        <div class="flex flex-wrap justify-center gap-4 mb-12">
-            <button class="gallery-filter active bg-secondary hover:bg-primary text-accent px-6 py-3 rounded-full font-semibold transition-all duration-300" data-filter="all">
-                Todos os Projetos
-            </button>
-            <button class="gallery-filter bg-gray-200 dark:bg-gray-700 hover:bg-secondary hover:text-accent text-gray-600 dark:text-gray-300 px-6 py-3 rounded-full font-semibold transition-all duration-300" data-filter="industrial">
-                Pintura Industrial
-            </button>
-            <button class="gallery-filter bg-gray-200 dark:bg-gray-700 hover:bg-secondary hover:text-accent text-gray-600 dark:text-gray-300 px-6 py-3 rounded-full font-semibold transition-all duration-300" data-filter="automotive">
-                Pintura Automotiva
-            </button>
-            <button class="gallery-filter bg-gray-200 dark:bg-gray-700 hover:bg-secondary hover:text-accent text-gray-600 dark:text-gray-300 px-6 py-3 rounded-full font-semibold transition-all duration-300" data-filter="plastic">
-                Plásticos Técnicos
-            </button>
-        </div>
-
         <!-- Gallery Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="galleryGrid">
             <!-- Project 1 - Industrial -->
             <div class="gallery-item group cursor-pointer" data-category="industrial">
                 <div class="bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                    <!-- Before/After Container -->
                     <div class="relative h-64 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                            <div class="text-center text-accent">
-                                <i class="fas fa-industry text-4xl mb-3 opacity-50"></i>
-                                <div class="text-sm font-semibold">Antes</div>
-                                <div class="text-xs opacity-75">Estrutura Metálica</div>
-                            </div>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center transform translate-x-full group-hover:translate-x-0 transition-transform duration-500">
-                            <div class="text-center text-accent">
-                                <i class="fas fa-industry text-4xl mb-3"></i>
-                                <div class="text-sm font-semibold">Depois</div>
-                                <div class="text-xs opacity-75">Pintura Completa</div>
-                            </div>
-                        </div>
+                        <img src="assets/img/cabine_de_pintura_monovia.png" alt="Cabine de Pintura Industrial" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Galpão Industrial XYZ</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura anticorrosiva em estrutura metálica de 5.000m²</p>
+                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Cabine de Pintura Monovia</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Sistema avançado de pintura industrial com controle de qualidade</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center text-sm text-gray-500">
-                                <i class="fas fa-calendar mr-2"></i>
-                                <span>Concluído em 2023</span>
+                                <i class="fas fa-industry mr-2"></i>
+                                <span>Equipamentos da Fábrica</span>
                             </div>
                             <div class="flex items-center text-sm text-green-500">
                                 <i class="fas fa-check-circle mr-2"></i>
-                                <span>30 dias</span>
+                                <span>Concluído</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 2 - Automotive -->
+            <!-- Project 2 - Automotive F1 -->
             <div class="gallery-item group cursor-pointer" data-category="automotive">
                 <div class="bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                     <div class="relative h-64 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                            <div class="text-center text-accent">
-                                <i class="fas fa-truck text-4xl mb-3 opacity-50"></i>
-                                <div class="text-sm font-semibold">Antes</div>
-                                <div class="text-xs opacity-75">Veículo Comercial</div>
-                            </div>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center transform translate-x-full group-hover:translate-x-0 transition-transform duration-500">
-                            <div class="text-center text-accent">
-                                <i class="fas fa-truck text-4xl mb-3"></i>
-                                <div class="text-sm font-semibold">Depois</div>
-                                <div class="text-xs opacity-75">Acabamento Premium</div>
-                            </div>
-                        </div>
+                        <img src="assets/img/f1-3.jpeg" alt="Peças Fórmula 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Frota Transportes ABC</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Repintura completa de 25 veículos comerciais</p>
+                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Componentes Fórmula 1</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura de alta performance em peças de decoração automotiva</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center text-sm text-gray-500">
-                                <i class="fas fa-calendar mr-2"></i>
-                                <span>Concluído em 2023</span>
+                                <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                <span>Linha Habitat</span>
                             </div>
                             <div class="flex items-center text-sm text-green-500">
                                 <i class="fas fa-check-circle mr-2"></i>
-                                <span>45 dias</span>
+                                <span>Concluído</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 3 - Plastic -->
+            <!-- Project 3 - Tools/Precision -->
             <div class="gallery-item group cursor-pointer" data-category="plastic">
                 <div class="bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                     <div class="relative h-64 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                            <div class="text-center text-accent">
-                                <i class="fas fa-cube text-4xl mb-3 opacity-50"></i>
-                                <div class="text-sm font-semibold">Antes</div>
-                                <div class="text-xs opacity-75">Peças Plásticas</div>
-                            </div>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center transform translate-x-full group-hover:translate-x-0 transition-transform duration-500">
-                            <div class="text-center text-accent">
-                                <i class="fas fa-cube text-4xl mb-3"></i>
-                                <div class="text-sm font-semibold">Depois</div>
-                                <div class="text-xs opacity-75">Acabamento Técnico</div>
-                            </div>
-                        </div>
+                        <img src="assets/img/foto-facas.jpeg" alt="Ferramentas de Precisão" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Componentes Eletrônicos</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura especializada em 5.000 peças técnicas</p>
+                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Ferramentas de Precisão</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Acabamento especializado em ferramentas e componentes técnicos</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center text-sm text-gray-500">
-                                <i class="fas fa-calendar mr-2"></i>
-                                <span>Concluído em 2023</span>
+                                <i class="fas fa-tools mr-2"></i>
+                                <span>Linha Industrial</span>
                             </div>
                             <div class="flex items-center text-sm text-green-500">
                                 <i class="fas fa-check-circle mr-2"></i>
-                                <span>20 dias</span>
+                                <span>Concluído</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 4 - Industrial -->
+            <!-- Project 4 - Gold Finish -->
+            <div class="gallery-item group cursor-pointer" data-category="plastic">
+                <div class="bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="assets/img/figure_gold.jpeg" alt="Acabamento Dourado" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Acabamento Dourado Premium</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura metálica dourada em peças decorativas e funcionais</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                <span>Linha Habitat</span>
+                            </div>
+                            <div class="flex items-center text-sm text-green-500">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                <span>Concluído</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 - F1 Black -->
+            <div class="gallery-item group cursor-pointer" data-category="automotive">
+                <div class="bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="assets/img/f1-black.png" alt="F1 Preto" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Aerofólios F1 Black Edition</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura mate premium em componentes aerodinâmicos</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                <span>Linha Habitat</span>
+                            </div>
+                            <div class="flex items-center text-sm text-green-500">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                <span>Concluído</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 - Industrial Equipment -->
             <div class="gallery-item group cursor-pointer" data-category="industrial">
                 <div class="bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                     <div class="relative h-64 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                            <div class="text-center text-accent">
-                                <i class="fas fa-cogs text-4xl mb-3 opacity-50"></i>
-                                <div class="text-sm font-semibold">Antes</div>
-                                <div class="text-xs opacity-75">Equipamento Industrial</div>
-                            </div>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center transform translate-x-full group-hover:translate-x-0 transition-transform duration-500">
-                            <div class="text-center text-accent">
-                                <i class="fas fa-cogs text-4xl mb-3"></i>
-                                <div class="text-sm font-semibold">Depois</div>
-                                <div class="text-xs opacity-75">Renovado</div>
-                            </div>
-                        </div>
+                        <img src="assets/img/IMG_8510.JPEG" alt="Equipamentos Industriais" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Maquinário Pesado</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Restauração e pintura de equipamentos industriais</p>
+                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Linha <i>habitat</i></h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura de capas de tomadas</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center text-sm text-gray-500">
-                                <i class="fas fa-calendar mr-2"></i>
-                                <span>Concluído em 2024</span>
+                                <i class="fas fa-industry mr-2"></i>
+                                <span>Linha Industrial</span>
                             </div>
                             <div class="flex items-center text-sm text-green-500">
                                 <i class="fas fa-check-circle mr-2"></i>
-                                <span>25 dias</span>
+                                <span>Concluído</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Project 5 - Automotive -->
-            <div class="gallery-item group cursor-pointer" data-category="automotive">
-                <div class="bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="relative h-64 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                            <div class="text-center text-accent">
-                                <i class="fas fa-car text-4xl mb-3 opacity-50"></i>
-                                <div class="text-sm font-semibold">Antes</div>
-                                <div class="text-xs opacity-75">Chassi Veicular</div>
-                            </div>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-600 to-yellow-800 flex items-center justify-center transform translate-x-full group-hover:translate-x-0 transition-transform duration-500">
-                            <div class="text-center text-accent">
-                                <i class="fas fa-car text-4xl mb-3"></i>
-                                <div class="text-sm font-semibold">Depois</div>
-                                <div class="text-xs opacity-75">Customizado</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Implementos Rodoviários</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura personalizada de chassis e carrocerias</p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center text-sm text-gray-500">
-                                <i class="fas fa-calendar mr-2"></i>
-                                <span>Concluído em 2024</span>
-                            </div>
-                            <div class="flex items-center text-sm text-green-500">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <span>35 dias</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 6 - Plastic -->
-            <div class="gallery-item group cursor-pointer" data-category="plastic">
-                <div class="bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="relative h-64 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                            <div class="text-center text-accent">
-                                <i class="fas fa-microchip text-4xl mb-3 opacity-50"></i>
-                                <div class="text-sm font-semibold">Antes</div>
-                                <div class="text-xs opacity-75">Componentes</div>
-                            </div>
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-br from-teal-600 to-teal-800 flex items-center justify-center transform translate-x-full group-hover:translate-x-0 transition-transform duration-500">
-                            <div class="text-center text-accent">
-                                <i class="fas fa-microchip text-4xl mb-3"></i>
-                                <div class="text-sm font-semibold">Depois</div>
-                                <div class="text-xs opacity-75">Finalizado</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Peças de Precisão</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Acabamento técnico em componentes eletrônicos</p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center text-sm text-gray-500">
-                                <i class="fas fa-calendar mr-2"></i>
-                                <span>Concluído em 2024</span>
-                            </div>
-                            <div class="flex items-center text-sm text-green-500">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <span>15 dias</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Stats -->
-        <div class="mt-16 bg-gradient-to-r from-secondary to-primary rounded-2xl p-8 text-center text-accent">
-            <h3 class="text-2xl font-bold mb-8">Resultados em Números</h3>
-            <div class="grid md:grid-cols-4 gap-6">
-                <div>
-                    <div class="text-3xl font-bold mb-2">500+</div>
-                    <div class="text-sm opacity-80">Projetos Finalizados</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold mb-2">1M+</div>
-                    <div class="text-sm opacity-80">m² Pintados</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold mb-2">98%</div>
-                    <div class="text-sm opacity-80">Taxa de Aprovação</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold mb-2">15</div>
-                    <div class="text-sm opacity-80">Anos de Experiência</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Call to Action -->
-        <div class="mt-12 text-center">
-            <h3 class="text-2xl font-bold text-primary dark:text-accent mb-4">Quer ver seu projeto aqui?</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-6">Entre em contato e transforme suas ideias em realidade</p>
-            <a href="#contato" class="inline-block bg-secondary hover:bg-primary text-accent px-8 py-3 rounded-full font-bold transition-all duration-300 hover:transform hover:scale-105">
-                <i class="fas fa-rocket mr-2"></i>
-                Iniciar Meu Projeto
-            </a>
         </div>
     </div>
 </section> 
