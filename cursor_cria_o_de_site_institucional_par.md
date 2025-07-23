@@ -3297,7 +3297,7 @@ function setupMapActions() {
     const getDirectionsBtn = document.getElementById('getDirections');
     if (getDirectionsBtn) {
         getDirectionsBtn.addEventListener('click', function() {
-            const address = 'Rua Industrial, 123 - Distrito Industrial, São Paulo - SP, 01234-567';
+            const address = 'R. Archimedes Manenti, 442 - Centenário, Caxias do Sul - RS, 95045-175';
             const encodedAddress = encodeURIComponent(address);
             window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
         });
@@ -3307,7 +3307,7 @@ function setupMapActions() {
     const shareLocationBtn = document.getElementById('shareLocation');
     if (shareLocationBtn) {
         shareLocationBtn.addEventListener('click', function() {
-            const address = 'Ultra Pinturas Especiais - Rua Industrial, 123 - Distrito Industrial, São Paulo - SP';
+            const address = 'R. Archimedes Manenti, 442 - Centenário, Caxias do Sul - RS, 95045-175';
             const url = `https://maps.google.com/?q=${encodeURIComponent(address)}`;
             
             if (navigator.share) {
@@ -3336,7 +3336,7 @@ ORG:Ultra Pinturas Especiais
 TEL:+551134567890
 TEL;TYPE=CELL:+5511999999999
 EMAIL:contato@ultrapinturas.com.br
-ADR:;;Rua Industrial, 123;São Paulo;SP;01234-567;Brasil
+ADR:;;R. Archimedes Manenti, 442 - Centenário, Caxias do Sul - RS, 95045-175
 URL:https://ultrapinturas.com.br
 END:VCARD`;
             

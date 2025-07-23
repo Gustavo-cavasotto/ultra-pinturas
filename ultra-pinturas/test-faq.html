@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste FAQ - Ultra Pinturas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #f59e0b;
+            --accent: #ffffff;
+            --light-gray: #f8fafc;
+            --dark-gray: #1f2937;
+            --transition-normal: 0.3s ease-in-out;
+            --transition-slow: 0.5s ease-in-out;
+        }
+
+        .text-primary { color: var(--primary); }
+        .text-secondary { color: var(--secondary); }
+        .text-accent { color: var(--accent); }
+        .bg-primary { background-color: var(--primary); }
+        .bg-secondary { background-color: var(--secondary); }
+        .bg-accent { background-color: var(--accent); }
+        .bg-light-gray { background-color: var(--light-gray); }
+
+        /* FAQ Accordion */
+        .faq-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            transition: background-color var(--transition-normal);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            transition: max-height 0.3s ease-in-out, 
+                        opacity 0.3s ease-in-out, 
+                        padding-top 0.3s ease-in-out, 
+                        padding-bottom 0.3s ease-in-out;
+        }
+
+        .faq-answer.active {
+            opacity: 1;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-light-gray">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-primary mb-8 text-center">Teste FAQ - Ultra Pinturas</h1>
+        
+        <div class="max-w-4xl mx-auto">
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-accent rounded-2xl shadow-lg overflow-hidden">
+                    <button class="faq-question w-full p-6 text-left flex items-center justify-between hover:bg-light-gray transition-colors">
+                        <span class="text-lg font-semibold text-primary">
+                            Vocês pintam peças metálicas de grande porte?
+                        </span>
+                        <i class="fas fa-chevron-down text-secondary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600 leading-relaxed">
+                            Sim, somos especializados em pintura de estruturas metálicas de grande porte, incluindo galpões industriais, 
+                            tanques, reservatórios, pontes e equipamentos pesados. Contamos com equipamentos adequados e espaço físico 
+                            para atender projetos de qualquer dimensão, sempre seguindo rigorosos padrões de qualidade e segurança.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-accent rounded-2xl shadow-lg overflow-hidden">
+                    <button class="faq-question w-full p-6 text-left flex items-center justify-between hover:bg-light-gray transition-colors">
+                        <span class="text-lg font-semibold text-primary">
+                            Qual é o prazo médio para conclusão dos projetos?
+                        </span>
+                        <i class="fas fa-chevron-down text-secondary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600 leading-relaxed">
+                            O prazo varia conforme a complexidade e tamanho do projeto. Em média, projetos industriais levam de 15 a 45 dias, 
+                            pintura automotiva de 5 a 20 dias, e plásticos técnicos de 7 a 15 dias. Realizamos uma análise detalhada antes 
+                            de cada projeto e fornecemos cronograma realista, sempre cumprindo os prazos acordados.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-accent rounded-2xl shadow-lg overflow-hidden">
+                    <button class="faq-question w-full p-6 text-left flex items-center justify-between hover:bg-light-gray transition-colors">
+                        <span class="text-lg font-semibold text-primary">
+                            Quais certificações vocês possuem?
+                        </span>
+                        <i class="fas fa-chevron-down text-secondary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600 leading-relaxed">
+                            Possuímos certificações ISO 9001 (Gestão da Qualidade), ISO 14001 (Gestão Ambiental), ISO 45001 
+                            (Segurança e Saúde Ocupacional) e conformidade com normas ABNT NBR para pintura industrial. 
+                            Todas as certificações são válidas e auditadas regularmente por organismos certificadores reconhecidos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 p-4 bg-green-100 rounded-lg">
+                <h3 class="font-bold text-green-800">Status do Teste:</h3>
+                <p id="status" class="text-green-700">Carregando...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setupFAQAccordion() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            const status = document.getElementById('status');
+            
+            if (faqQuestions.length === 0) {
+                status.textContent = '❌ Erro: Nenhum elemento FAQ encontrado';
+                status.className = 'text-red-700';
+                return;
+            }
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const icon = this.querySelector('i');
+                    
+                    // Close other open items
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== question) {
+                            const otherItem = otherQuestion.parentElement;
+                            const otherAnswer = otherItem.querySelector('.faq-answer');
+                            const otherIcon = otherQuestion.querySelector('i');
+                            
+                            // Animate close
+                            otherAnswer.style.maxHeight = '0px';
+                            otherAnswer.style.paddingTop = '0px';
+                            otherAnswer.style.paddingBottom = '0px';
+                            otherAnswer.style.opacity = '0';
+                            otherIcon.style.transform = 'rotate(0deg)';
+                            
+                            // Remove active class after animation
+                            setTimeout(() => {
+                                otherAnswer.classList.remove('active');
+                            }, 300);
+                        }
+                    });
+                    
+                    // Toggle current item
+                    if (!answer.classList.contains('active')) {
+                        // Open
+                        answer.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        answer.style.paddingTop = '1.5rem';
+                        answer.style.paddingBottom = '1.5rem';
+                        answer.style.opacity = '1';
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        // Close
+                        answer.style.maxHeight = '0px';
+                        answer.style.paddingTop = '0px';
+                        answer.style.paddingBottom = '0px';
+                        answer.style.opacity = '0';
+                        icon.style.transform = 'rotate(0deg)';
+                        
+                        // Remove active class after animation
+                        setTimeout(() => {
+                            answer.classList.remove('active');
+                        }, 300);
+                    }
+                });
+            });
+            
+            status.textContent = '✅ FAQ configurado com sucesso! Clique nas perguntas para testar.';
+            status.className = 'text-green-700';
+        }
+
+        document.addEventListener('DOMContentLoaded', setupFAQAccordion);
+    </script>
+</body>
+</html> 

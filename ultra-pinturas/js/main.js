@@ -246,18 +246,41 @@ function setupFAQAccordion() {
                     const otherAnswer = otherItem.querySelector('.faq-answer');
                     const otherIcon = otherQuestion.querySelector('i');
                     
-                    otherAnswer.classList.add('hidden');
+                    // Animate close
+                    otherAnswer.style.maxHeight = '0px';
+                    otherAnswer.style.paddingTop = '0px';
+                    otherAnswer.style.paddingBottom = '0px';
+                    otherAnswer.style.opacity = '0';
                     otherIcon.style.transform = 'rotate(0deg)';
+                    
+                    // Remove active class after animation
+                    setTimeout(() => {
+                        otherAnswer.classList.remove('active');
+                    }, 300);
                 }
             });
             
             // Toggle current item
-            if (answer.classList.contains('hidden')) {
-                answer.classList.remove('hidden');
+            if (!answer.classList.contains('active')) {
+                // Open
+                answer.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                answer.style.paddingTop = '1.5rem';
+                answer.style.paddingBottom = '1.5rem';
+                answer.style.opacity = '1';
                 icon.style.transform = 'rotate(180deg)';
             } else {
-                answer.classList.add('hidden');
+                // Close
+                answer.style.maxHeight = '0px';
+                answer.style.paddingTop = '0px';
+                answer.style.paddingBottom = '0px';
+                answer.style.opacity = '0';
                 icon.style.transform = 'rotate(0deg)';
+                
+                // Remove active class after animation
+                setTimeout(() => {
+                    answer.classList.remove('active');
+                }, 300);
             }
         });
     });
@@ -296,7 +319,7 @@ function setupMapActions() {
     const getDirectionsBtn = document.getElementById('getDirections');
     if (getDirectionsBtn) {
         getDirectionsBtn.addEventListener('click', function() {
-            const address = 'Rua Industrial, 123 - Distrito Industrial, São Paulo - SP, 01234-567';
+            const address = 'R. Archimedes Manenti, 442 - Centenário, Caxias do Sul - RS, 95045-175';
             const encodedAddress = encodeURIComponent(address);
             window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
         });
@@ -306,9 +329,9 @@ function setupMapActions() {
     
     // Share location button
     const shareLocationBtn = document.getElementById('shareLocation');
-    if (shareLocationBtn) {
-        shareLocationBtn.addEventListener('click', function() {
-            const address = 'Ultra Pinturas Especiais - Rua Industrial, 123 - Distrito Industrial, São Paulo - SP';
+        if (shareLocationBtn) {
+            shareLocationBtn.addEventListener('click', function() {
+            const address = 'Ultra Pinturas Especiais - R. Archimedes Manenti, 442 - Centenário, Caxias do Sul - RS, 95045-175';
             const url = `https://maps.google.com/?q=${encodeURIComponent(address)}`;
             
             if (navigator.share) {
@@ -326,31 +349,7 @@ function setupMapActions() {
         });
     }
     
-    // Download vCard button
-    const downloadVcardBtn = document.getElementById('downloadVcard');
-    if (downloadVcardBtn) {
-        downloadVcardBtn.addEventListener('click', function() {
-            const vcard = `BEGIN:VCARD
-VERSION:3.0
-FN:Ultra Pinturas Especiais
-ORG:Ultra Pinturas Especiais
-TEL:+5551995273661
-TEL;TYPE=CELL:+5551995273661
-EMAIL:contato@ultrapinturas.com.br
-ADR:;;Rua Industrial, 123;São Paulo;SP;01234-567;Brasil
-URL:https://ultrapinturas.com.br
-END:VCARD`;
-            
-            const blob = new Blob([vcard], { type: 'text/vcard' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'ultra-pinturas-contato.vcf';
-            a.click();
-            window.URL.revokeObjectURL(url);
-        });
     }
-}
 
 // ==========================================
 // HIDE ALL POPUPS INITIALLY

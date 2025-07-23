@@ -570,11 +570,17 @@ body {
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height var(--transition-slow);
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: max-height 0.3s ease-in-out, 
+              opacity 0.3s ease-in-out, 
+              padding-top 0.3s ease-in-out, 
+              padding-bottom 0.3s ease-in-out;
 }
 
-.faq-answer.show {
-  max-height: 200px;
+.faq-answer.active {
+  opacity: 1;
 }
 
 /* Gallery Grid */
