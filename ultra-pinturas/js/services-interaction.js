@@ -207,7 +207,7 @@ function setupWhatsAppIntegration() {
 // SEND SERVICES VIA WHATSAPP
 // ==========================================
 function sendServicesViaWhatsApp() {
-    const phone = '5551995273661'; // WhatsApp number
+    const phone = '5551989142505'; // WhatsApp number
     
     let message = `🎨 *SOLICITAÇÃO DE ORÇAMENTO - ULTRA PINTURAS*\n\n`;
     message += `Olá! Gostaria de solicitar um orçamento para os seguintes serviços:\n\n`;
@@ -242,7 +242,7 @@ function sendContactFormViaWhatsApp() {
     if (!form) return;
     
     const formData = new FormData(form);
-    const phone = '5551995273661';
+    const phone = '5551989142505';
     
     let message = `🎨 *CONTATO - ULTRA PINTURAS*\n\n`;
     message += `*Nome:* ${formData.get('name') || 'Não informado'}\n`;
