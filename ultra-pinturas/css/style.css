@@ -577,10 +577,18 @@ body {
               opacity 0.3s ease-in-out, 
               padding-top 0.3s ease-in-out, 
               padding-bottom 0.3s ease-in-out;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .faq-answer.active {
   opacity: 1;
+  max-height: none !important; /* Sem limite de altura */
+  height: auto !important; /* Altura automática */
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  overflow: visible !important; /* Garantir que o conteúdo não seja cortado */
+  min-height: fit-content !important; /* Altura mínima baseada no conteúdo */
 }
 
 /* Gallery Grid */
