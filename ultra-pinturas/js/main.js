@@ -232,12 +232,14 @@ function setupGalleryFilter() {
 // ==========================================
 function setupFAQAccordion() {
     const faqQuestions = document.querySelectorAll('.faq-question');
+    console.log('🔍 FAQ: Encontrados', faqQuestions.length, 'elementos de pergunta');
     
     faqQuestions.forEach(question => {
         question.addEventListener('click', function() {
             const faqItem = this.parentElement;
             const answer = faqItem.querySelector('.faq-answer');
             const icon = this.querySelector('i');
+            console.log('🔍 FAQ: Clique detectado, answer:', answer, 'active:', answer.classList.contains('active'));
             
             // Close other open items
             faqQuestions.forEach(otherQuestion => {
@@ -264,10 +266,12 @@ function setupFAQAccordion() {
             if (!answer.classList.contains('active')) {
                 // Open
                 answer.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
+                answer.style.maxHeight = 'none'; // Remover limite de altura
+                answer.style.height = 'auto'; // Altura automática
                 answer.style.paddingTop = '1.5rem';
                 answer.style.paddingBottom = '1.5rem';
                 answer.style.opacity = '1';
+                answer.style.overflow = 'visible';
                 icon.style.transform = 'rotate(180deg)';
             } else {
                 // Close
