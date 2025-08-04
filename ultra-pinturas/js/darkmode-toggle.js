@@ -185,6 +185,9 @@ function updateMetaThemeColor(theme) {
 function updateThemeDependentElements(theme) {
     // Update any elements that need special handling for theme changes
     
+    // Update logo based on theme
+    updateLogo(theme);
+    
     // Update syntax highlighting if present
     updateSyntaxHighlighting(theme);
     
@@ -193,6 +196,29 @@ function updateThemeDependentElements(theme) {
     
     // Update any embedded iframes that support theme
     updateEmbeddedContent(theme);
+}
+
+// ==========================================
+// UPDATE LOGO BASED ON THEME
+// ==========================================
+function updateLogo(theme) {
+    const logos = document.querySelectorAll('img[src*="logo-ultra"]');
+    
+    logos.forEach(logo => {
+        const currentSrc = logo.src;
+        
+        if (theme === 'dark') {
+            // Change to white logo for dark theme
+            if (currentSrc.includes('logo-ultra.png') && !currentSrc.includes('logo-ultra-white.png')) {
+                logo.src = currentSrc.replace('logo-ultra.png', 'logo-ultra-white.png');
+            }
+        } else {
+            // Change to regular logo for light theme
+            if (currentSrc.includes('logo-ultra-white.png')) {
+                logo.src = currentSrc.replace('logo-ultra-white.png', 'logo-ultra.png');
+            }
+        }
+    });
 }
 
 // ==========================================
