@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <!-- Página Principal -->
+    <url>
+        <loc>https://ultrapinturasespeciais.com.br/</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Seção Sobre -->
+    <url>
+        <loc>https://ultrapinturasespeciais.com.br/#sobre</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Seção Serviços -->
+    <url>
+        <loc>https://ultrapinturasespeciais.com.br/#servicos</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Seção Diferenciais -->
+    <url>
+        <loc>https://ultrapinturasespeciais.com.br/#diferenciais</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Seção Galeria -->
+    <url>
+        <loc>https://ultrapinturasespeciais.com.br/#galeria</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Seção Contato -->
+    <url>
+        <loc>https://ultrapinturasespeciais.com.br/#contato</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Seção FAQ -->
+    <url>
+        <loc>https://ultrapinturasespeciais.com.br/#faq</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Seção Certificações -->
+    <url>
+        <loc>https://ultrapinturasespeciais.com.br/#certificacoes</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Seção Clientes -->
+    <url>
+        <loc>https://ultrapinturasespeciais.com.br/#clientes</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Seção Video Institucional -->
+    <url>
+        <loc>https://ultrapinturasespeciais.com.br/#video</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+</urlset>

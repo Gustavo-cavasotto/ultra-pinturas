@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ultrapinturasespeciais.com.br/sitemap.xml
+
+# Crawl-delay para não sobrecarregar o servidor
+Crawl-delay: 1
+
+# Permitir todos os arquivos importantes
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+Allow: /components/
+
+# Bloquear arquivos desnecessários
+Disallow: /test-*.html
+Disallow: /favicon_io.zip
+Disallow: /README.md
+Disallow: /MOBILE-RESPONSIVO.md
+Disallow: /tailwind.config.js
+
+# Permitir indexação de todas as páginas principais
+Allow: /index.html
+Allow: /sobre
+Allow: /servicos
+Allow: /diferenciais
+Allow: /galeria
+Allow: /contato
