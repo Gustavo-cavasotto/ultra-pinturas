@@ -11,150 +11,486 @@
             </p>
         </div>
 
-        <!-- Gallery Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="galleryGrid">
-            <!-- Project 1 - Industrial -->
-            <div class="gallery-item group cursor-pointer" data-category="industrial">
-                <div class="bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="assets/img/cabine_de_pintura_monovia.png" alt="Cabine de Pintura Industrial" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Cabine de Pintura Monovia</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Sistema avançado de pintura industrial com controle de qualidade</p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center text-sm text-gray-500">
-                                <i class="fas fa-industry mr-2"></i>
-                                <span>Equipamentos da Fábrica</span>
+        <!-- Gallery Carousel -->
+        <div class="relative max-w-7xl mx-auto">
+            <!-- Carousel Container -->
+            <div class="relative overflow-hidden rounded-2xl">
+                <div class="flex transition-transform duration-500 ease-in-out" id="galleryCarousel">
+                    <!-- Slide Group 1 - Primeiras 6 imagens -->
+                    <div class="w-full flex-shrink-0">
+                        <!-- Mobile/Tablet: 1 imagem por vez -->
+                        <div class="block md:hidden">
+                            <!-- Project 1 - Mobile/Tablet -->
+                            <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 mx-2">
+                                <div class="relative h-80 overflow-hidden">
+                                    <img src="assets/img/cabine_de_pintura_monovia.png" alt="Cabine de Pintura Industrial" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-primary dark:text-accent mb-3">Cabine de Pintura Monovia</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">Sistema avançado de pintura industrial com controle de qualidade.</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-industry mr-2"></i>
+                                            <span>Equipamentos da Fábrica</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex items-center text-sm text-green-500">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <span>Concluído</span>
+                        </div>
+
+                        <!-- Desktop: Grid 6 imagens -->
+                        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Project 1 - Desktop -->
+                            <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="assets/img/cabine_de_pintura_monovia.png" alt="Cabine de Pintura Industrial" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Cabine de Pintura Monovia</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Sistema avançado de pintura industrial com controle de qualidade.</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-industry mr-2"></i>
+                                            <span>Equipamentos da Fábrica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 2 - Desktop -->
+                            <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="assets/img/Cabine_integrada_estufa.png" alt="Cabine de Pintura Pressurizada com Estufa Integrada" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Cabine de Pintura Pressurizada com Estufa Integrada</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Tecnologia de ponta para pintura de alta qualidade e eficiência. Acabamento de alta precisão.</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-industry mr-2"></i>
+                                            <span>Equipamentos da Fábrica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 3 - Desktop -->
+                            <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="assets/img/estufa.png" alt="Estufa de Secagem" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Estufa de Secagem</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Estufa de secagem para pintura de alta qualidade e eficiência.</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-industry mr-2"></i>
+                                            <span>Equipamentos da Fábrica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 4 - Desktop -->
+                            <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="assets/img/figure_gold.jpeg" alt="Acabamento Dourado" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Acabamento Dourado Premium</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura metálica dourada em peças decorativas e funcionais</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                            <span>Linha Habitat</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 5 - Desktop -->
+                            <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="assets/img/f1-red-black-fabrica.png" alt="F1 Preto" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Decorações de luxo</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura premium em componentes de decoração automotiva</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                            <span>Linha Habitat</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 6 - Desktop -->
+                            <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="assets/img/f1-capacete.png" alt="Capas de Tomadas" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Decorações de luxo esportivas</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura premium em componentes de decoração automotiva</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                            <span>Linha Habitat</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide Group 2 - Próximas 6 imagens -->
+                    <div class="w-full flex-shrink-0">
+                        <!-- Mobile/Tablet: 1 imagem por vez -->
+                        <div class="block md:hidden">
+                            <!-- Project 2 - Mobile/Tablet -->
+                            <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 mx-2">
+                                <div class="relative h-80 overflow-hidden">
+                                    <img src="assets/img/Cabine_integrada_estufa.png" alt="Cabine de Pintura Pressurizada com Estufa Integrada" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-primary dark:text-accent mb-3">Cabine de Pintura Pressurizada com Estufa Integrada</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">Tecnologia de ponta para pintura de alta qualidade e eficiência. Acabamento de alta precisão.</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-industry mr-2"></i>
+                                            <span>Equipamentos da Fábrica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Desktop: Grid 6 imagens -->
+                        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Project 7 - Desktop -->
+                            <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="assets/img/F1_RED.png" alt="F1 Vermelho" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Decorações de luxo</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura premium em componentes de decoração automotiva</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                            <span>Linha Habitat</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 8 - Desktop -->
+                            <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="assets/img/autoparts-lampadas-onibus.jpeg" alt="Ferramentas Especializadas" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Autoparts</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura premium em componentes de autoparts</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-car mr-2"></i>
+                                            <span>Autoparts</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 9 - Desktop -->
+                            <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="assets/img/autoparts-tiaras-onibus.jpeg" alt="Montagem Ultra" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Autoparts</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura premium em componentes de autoparts</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-car mr-2"></i>
+                                            <span>Autoparts</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 10 - Desktop -->
+                            <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="assets/img/autoparts-onibus.jpg" alt="Painel Solar" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Autoparts</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura premium em componentes de autoparts</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-car mr-2"></i>
+                                            <span>Autoparts</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 11 - Desktop -->
+                            <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="assets/img/foto-facas.jpeg" alt="Ferramentas de precisão" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Ferramentas de precisão</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura de alta qualidade em ferramentas e equipamentos com acabamento profissional</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-industry mr-2"></i>
+                                            <span>Linha Industrial</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 12 - Desktop -->
+                            <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="assets/img/lixeiras-vermelhas.png" alt="Lixeiras" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Componentes Residenciais e Industriais</h3>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura de alta qualidade em ferramentas e equipamentos com acabamento profissional</p>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center text-sm text-gray-500">
+                                            <i class="fas fa-industry mr-2"></i>
+                                            <span>Linha Industrial</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slides adicionais para mobile/tablet (uma imagem por vez) -->
+                    <div class="w-full flex-shrink-0 block md:hidden">
+                        <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 mx-2">
+                            <div class="relative h-80 overflow-hidden">
+                                <img src="assets/img/estufa.png" alt="Estufa de Secagem" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-primary dark:text-accent mb-3">Estufa de Secagem</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Estufa de secagem para pintura de alta qualidade e eficiência.</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-industry mr-2"></i>
+                                        <span>Equipamentos da Fábrica</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 block md:hidden">
+                        <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 mx-2">
+                            <div class="relative h-80 overflow-hidden">
+                                <img src="assets/img/figure_gold.jpeg" alt="Acabamento Dourado" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-primary dark:text-accent mb-3">Acabamento Dourado Premium</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Pintura metálica dourada em peças decorativas e funcionais</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                        <span>Linha Habitat</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 block md:hidden">
+                        <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 mx-2">
+                            <div class="relative h-80 overflow-hidden">
+                                <img src="assets/img/f1-red-black-fabrica.png" alt="F1 Preto" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-primary dark:text-accent mb-3">Decorações de luxo</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Pintura premium em componentes de decoração automotiva</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                        <span>Linha Habitat</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 block md:hidden">
+                        <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 mx-2">
+                            <div class="relative h-80 overflow-hidden">
+                                <img src="assets/img/f1-capacete.png" alt="Capas de Tomadas" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-primary dark:text-accent mb-3">Decorações de luxo esportivas</i></h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Pintura premium em componentes de decoração automotiva</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                        <span>Linha Habitat</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 block md:hidden">
+                        <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 mx-2">
+                            <div class="relative h-80 overflow-hidden">
+                                <img src="assets/img/F1_RED.png" alt="F1 Vermelho" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-primary dark:text-accent mb-3">Decorações de luxo esportivas</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Pintura premium em componentes de decoração automotiva</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                        <span>Linha Habitat</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 block md:hidden">
+                        <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 mx-2">
+                            <div class="relative h-80 overflow-hidden">
+                                <img src="assets/img/foto-facas.jpeg" alt="Ferramentas Especializadas" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-primary dark:text-accent mb-3">Ferramentas de precisão</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Pintura de alta qualidade em ferramentas e equipamentos com acabamento profissional</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-industry mr-2"></i>
+                                        <span>Linha Industrial</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 block md:hidden">
+                        <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 mx-2">
+                            <div class="relative h-80 overflow-hidden">
+                                <img src="assets/img/autoparts-tiaras-onibus.jpeg" alt="Montagem Ultra" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-primary dark:text-accent mb-3">Autoparts</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Pintura premium em componentes de autoparts</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-car mr-2"></i>
+                                        <span>Autoparts</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 block md:hidden">
+                        <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 mx-2">
+                            <div class="relative h-80 overflow-hidden">
+                                <img src="assets/img/autoparts-onibus.jpg" alt="Painel Solar" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-primary dark:text-accent mb-3">Autoparts</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Pintura premium em componentes de autoparts</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-car mr-2"></i>
+                                        <span>Autoparts</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 block md:hidden">
+                        <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 mx-2">
+                            <div class="relative h-80 overflow-hidden">
+                                <img src="assets/img/lixeiras-vermelhas.png" alt="Cabine de Pintura" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-primary dark:text-accent mb-3">Componentes Residenciais e Industriais</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Pintura de alta qualidade em ferramentas e equipamentos com acabamento profissional</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-industry mr-2"></i>
+                                        <span>Linha Industrial</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 block md:hidden">
+                        <div class="gallery-item group cursor-pointer bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 mx-2">
+                            <div class="relative h-80 overflow-hidden">
+                                <img src="assets/img/autoparts-lampadas-onibus.jpeg" alt="F1 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-primary dark:text-accent mb-3">Autoparts</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Pintura premium em componentes de autoparts</p>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-car mr-2"></i>
+                                        <span>Autoparts</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 2 - Automotive F1 -->
-            <div class="gallery-item group cursor-pointer" data-category="automotive">
-                <div class="bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="assets/img/f1-3.jpeg" alt="Peças Fórmula 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Componentes Fórmula 1</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura de alta performance em peças de decoração automotiva</p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center text-sm text-gray-500">
-                                <i class="fas fa-star text-yellow-500 mr-2"></i>
-                                <span>Linha Habitat</span>
-                            </div>
-                            <div class="flex items-center text-sm text-green-500">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <span>Concluído</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Navigation Arrows -->
+            <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-700 text-primary dark:text-accent p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10" id="prevBtn">
+                <i class="fas fa-chevron-left text-xl"></i>
+            </button>
+            
+            <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-700 text-primary dark:text-accent p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10" id="nextBtn">
+                <i class="fas fa-chevron-right text-xl"></i>
+            </button>
 
-            <!-- Project 3 - Tools/Precision -->
-            <div class="gallery-item group cursor-pointer" data-category="plastic">
-                <div class="bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="assets/img/foto-facas.jpeg" alt="Ferramentas de Precisão" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Ferramentas de Precisão</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Acabamento especializado em ferramentas e componentes técnicos</p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center text-sm text-gray-500">
-                                <i class="fas fa-tools mr-2"></i>
-                                <span>Linha Industrial</span>
-                            </div>
-                            <div class="flex items-center text-sm text-green-500">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <span>Concluído</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4 - Gold Finish -->
-            <div class="gallery-item group cursor-pointer" data-category="plastic">
-                <div class="bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="assets/img/figure_gold.jpeg" alt="Acabamento Dourado" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Acabamento Dourado Premium</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura metálica dourada em peças decorativas e funcionais</p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center text-sm text-gray-500">
-                                <i class="fas fa-star text-yellow-500 mr-2"></i>
-                                <span>Linha Habitat</span>
-                            </div>
-                            <div class="flex items-center text-sm text-green-500">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <span>Concluído</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 5 - F1 Black -->
-            <div class="gallery-item group cursor-pointer" data-category="automotive">
-                <div class="bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="assets/img/f1-black.png" alt="F1 Preto" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">F1 Black Edition</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura mate premium em componentes de decoração automotiva</p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center text-sm text-gray-500">
-                                <i class="fas fa-star text-yellow-500 mr-2"></i>
-                                <span>Linha Habitat</span>
-                            </div>
-                            <div class="flex items-center text-sm text-green-500">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <span>Concluído</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 6 - Industrial Equipment -->
-            <div class="gallery-item group cursor-pointer" data-category="industrial">
-                <div class="bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="assets/img/IMG_8510.JPEG" alt="Equipamentos Industriais" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-primary dark:text-accent mb-2">Linha <i>habitat</i></h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Pintura de capas de tomadas</p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center text-sm text-gray-500">
-                                <i class="fas fa-industry mr-2"></i>
-                                <span>Linha Industrial</span>
-                            </div>
-                            <div class="flex items-center text-sm text-green-500">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <span>Concluído</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Carousel Indicators -->
+            <div class="flex justify-center mt-8 space-x-2" id="carouselIndicators">
+                <!-- Indicators will be generated by JavaScript -->
             </div>
         </div>
     </div>

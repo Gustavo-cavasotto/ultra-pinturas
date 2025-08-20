@@ -170,6 +170,7 @@
     <script src="./js/services-interaction.js"></script>
     <script src="./js/form-validation.js"></script>
     <script src="./js/darkmode-toggle.js"></script>
+    <script src="./js/gallery-carousel.js"></script>
     <script src="./assets/js/hero-carousel.js"></script>
     <script src="./assets/js/carousel-debug.js"></script>
     <script src="./assets/js/carousel-fix.js"></script>
@@ -274,6 +275,12 @@
                 if (typeof window.initHeroCarousel === 'function') {
                     window.initHeroCarousel();
                     console.log('✅ Hero Carousel inicializado');
+                }
+                
+                // Initialize gallery carousel
+                if (typeof window.initializeGalleryCarousel === 'function') {
+                    window.initializeGalleryCarousel();
+                    console.log('✅ Gallery Carousel inicializado');
                 }
                 
                 console.log('✅ Todas as funcionalidades foram inicializadas após carregamento dos componentes');
