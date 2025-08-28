@@ -65,7 +65,7 @@ function validateContactForm() {
     // Phone validation
     const phone = formData.get('phone');
     if (!phone || !isValidPhone(phone)) {
-        showFieldError('phone', 'Telefone inválido (formato: (51) 98914-2505)');
+        showFieldError('phone', 'Telefone inválido (formato: (54) 99907-7097)');
         isValid = false;
     }
     
